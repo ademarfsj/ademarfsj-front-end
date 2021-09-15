@@ -1,0 +1,21 @@
+<div class="skill-component">
+
+    <div class="row">
+        <div class="col-md-12"
+        *ngFor="let skill of skills">
+
+            <div class="skill-detail">
+                
+                <div title="{{skill.name + ' - ' + (skill.description || '')}}">
+                    {{skill.name}}
+                </div>
+
+                <div>
+                    {{getProgressInAsciiArt(skill.level)}}
+                </div>
+                
+            </div>
+    
+        </div>
+    </div>
+</div>

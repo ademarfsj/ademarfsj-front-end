@@ -1,1 +1,11 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+html, 
+body {
+    height: 100%;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
