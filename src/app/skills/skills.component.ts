@@ -18,8 +18,28 @@ export class SkillsComponent implements OnInit {
         level: 90
       },
       { 
+        name: 'SQL',
+        level: 70
+      },
+      { 
+        name: 'SpringBoot',
+        level: 55
+      },
+      { 
+        name: 'JasperReports',
+        level: 75
+      },
+      { 
         name: 'Angular',
-        level: 60
+        level: 55
+      },
+      { 
+        name: 'HTML/CSS',
+        level: 50
+      },
+      { 
+        name: 'JavaScript',
+        level: 75
       }
     ];
 

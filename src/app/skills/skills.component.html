@@ -1,21 +1,37 @@
 <div class="skill-component">
 
     <div class="row">
-        <div class="col-md-12"
-        *ngFor="let skill of skills">
 
-            <div class="skill-detail">
-                
-                <div title="{{skill.name + ' - ' + (skill.description || '')}}">
-                    {{skill.name}}
+        <div class="col-md-12">
+
+            <span class="code-dark-gray">{{ '[' }}</span>
+
+            <div class="row">
+
+                <div class="col-md-12"
+                *ngFor="let skill of skills; let first = first; let last = last;">
+        
+                    <span class="code-dark-gray">{{ first ? '{' : '}, {' }}</span>
+                    
+                    <div class="skill-detail">
+                        <div title="{{skill.name + ' - ' + (skill.description || '')}}">
+                            {{skill.name}}
+                        </div>
+        
+                        <div>
+                            {{getProgressInAsciiArt(skill.level)}}
+                        </div>
+                    </div>
+        
+                    <span class="code-dark-gray">{{ (last ? '}' : '' )}}</span>
+            
                 </div>
 
-                <div>
-                    {{getProgressInAsciiArt(skill.level)}}
-                </div>
-                
             </div>
-    
+
+            <span class="code-dark-gray">{{ ']' }}</span>
+
         </div>
+
     </div>
 </div>

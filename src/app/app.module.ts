@@ -13,6 +13,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { OpenDivComponent } from './open-div/open-div.component';
 import { CloseDivComponent } from './close-div/close-div.component';
+import { ExplorerComponent } from './explorer/explorer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CloseDivComponent } from './close-div/close-div.component';
     SkillsComponent,
     PresentationComponent,
     OpenDivComponent,
-    CloseDivComponent
+    CloseDivComponent,
+    ExplorerComponent
   ],
   imports: [
     BrowserModule,

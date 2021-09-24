@@ -1,17 +1,34 @@
+
 <div class="app">
-
     <div class="row">
-        <open-div htmlClass="presentation"></open-div>
-        <presentation></presentation>
-        <close-div></close-div>
+    
+        <div class="col-3 px-0 vh-100 position-fixed">
+            
+            <explorer></explorer>
+
+        </div>
+    
+        <div class="col offset-3 vh-100">
+    
+            <div id = "presentation"
+                 class="row">
+                <open-div htmlClass="presentation"></open-div>
+                <presentation></presentation>
+                <close-div></close-div>
+            </div>
+        
+            <br>
+        
+            <div id = "skills"
+                 class="row">
+                <open-div htmlClass="skills"></open-div>
+                <skills></skills>
+                <close-div></close-div>
+            </div>
+
+        </div>
+    
     </div>
 
-    <br>
-
-    <div class="row">
-        <open-div htmlClass="skills"></open-div>
-        <skills></skills>
-        <close-div></close-div>
-    </div>
 
 </div>
