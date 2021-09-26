@@ -13,13 +13,13 @@
         
                     <span class="code-dark-gray">{{ first ? '{' : '}, {' }}</span>
                     
-                    <div class="skill-detail">
-                        <div title="{{skill.name + ' - ' + (skill.description || '')}}">
+                    <div class="skill-detail" title="{{skill.name + ' - ' + skill.level + (skill.description ? (' - ' + skill.description) : '')}}">
+                        <div>
                             {{skill.name}}
                         </div>
         
                         <div>
-                            {{getProgressInAsciiArt(skill.level)}}
+                            {{skill.levelInAsciiArt}}
                         </div>
                     </div>
         

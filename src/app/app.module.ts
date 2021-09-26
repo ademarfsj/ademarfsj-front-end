@@ -11,18 +11,22 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsComponent } from './skills/skills.component';
 import { PresentationComponent } from './presentation/presentation.component';
-import { OpenDivComponent } from './open-div/open-div.component';
-import { CloseDivComponent } from './close-div/close-div.component';
+import { OpenTagComponent } from './open-tag/open-tag.component';
+import { CloseTagComponent } from './close-tag/close-tag.component';
 import { ExplorerComponent } from './explorer/explorer.component';
+import { AboutComponent } from './about/about.component';
+import { SocialComponent } from './social/social.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsComponent,
     PresentationComponent,
-    OpenDivComponent,
-    CloseDivComponent,
-    ExplorerComponent
+    OpenTagComponent,
+    CloseTagComponent,
+    ExplorerComponent,
+    AboutComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,

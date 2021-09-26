@@ -15,7 +15,7 @@ export class SkillsComponent implements OnInit {
     this.skills = [
       { 
         name: 'Java',
-        level: 90
+        level: 85
       },
       { 
         name: 'SQL',
@@ -28,6 +28,10 @@ export class SkillsComponent implements OnInit {
       { 
         name: 'JasperReports',
         level: 75
+      },
+      { 
+        name: 'Docker',
+        level: 50
       },
       { 
         name: 'Angular',
@@ -46,9 +50,12 @@ export class SkillsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.skills.forEach(skill => {
+      skill.levelInAsciiArt = this.getProgressInAsciiArt(skill.level);
+    });
   }
 
-  public getProgressInAsciiArt(level: number) {
+  private getProgressInAsciiArt(level: number) {
     const numberOfCharacters = 20;
     var asciiArtProgress = '';
 
@@ -61,8 +68,6 @@ export class SkillsComponent implements OnInit {
     for (let index = asciiArtProgress.length; index < numberOfCharacters; index++) {
       asciiArtProgress += '▱';
     }
-
-    //asciiArtProgress = '[' + asciiArtProgress + ']';
 
     return asciiArtProgress;
   }
