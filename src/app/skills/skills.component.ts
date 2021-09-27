@@ -30,6 +30,10 @@ export class SkillsComponent implements OnInit {
         level: 75
       },
       { 
+        name: 'Git',
+        level: 70
+      },
+      { 
         name: 'Docker',
         level: 50
       },

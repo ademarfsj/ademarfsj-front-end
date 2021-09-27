@@ -4,14 +4,14 @@
 
         <div class="col-md-12">
 
-            <span class="code-dark-gray">{{ '[' }}</span>
+            <span class="code dark-gray">{{ '[' }}</span>
 
             <div class="row">
 
                 <div class="col-md-12"
                 *ngFor="let skill of skills; let first = first; let last = last;">
         
-                    <span class="code-dark-gray">{{ first ? '{' : '}, {' }}</span>
+                    <span class="code dark-gray">{{ first ? '{' : '}, {' }}</span>
                     
                     <div class="skill-detail" title="{{skill.name + ' - ' + skill.level + (skill.description ? (' - ' + skill.description) : '')}}">
                         <div>
@@ -23,13 +23,13 @@
                         </div>
                     </div>
         
-                    <span class="code-dark-gray">{{ (last ? '}' : '' )}}</span>
+                    <span class="code dark-gray">{{ (last ? '}' : '' )}}</span>
             
                 </div>
 
             </div>
 
-            <span class="code-dark-gray">{{ ']' }}</span>
+            <span class="code dark-gray">{{ ']' }}</span>
 
         </div>
 
