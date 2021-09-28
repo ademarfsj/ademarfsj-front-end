@@ -2,17 +2,17 @@
 <div class="app">
     <div class="row">
     
-        <div class="col-3 px-0 vh-100 position-fixed">
+        <div class="col-3 px-0 vh-100 position-fixed d-none d-md-block">
             
             <explorer></explorer>
 
         </div>
     
-        <div class="col offset-3 content">
+        <div class="col offset-md-3 content">
     
             <div id = "presentation"
                  class="row">
-                <open-tag tagName="div" htmlClass="presentation"></open-tag>
+                <open-tag tagName="div" htmlId="presentation"></open-tag>
                 <presentation></presentation>
                 <close-tag tagName="div"></close-tag>
             </div>
@@ -21,16 +21,16 @@
     
             <div id = "about"
                  class="row">
-                <open-tag tagName="div" htmlClass="about"></open-tag>
+                <open-tag tagName="div" htmlId="about"></open-tag>
                 <about></about>
                 <close-tag tagName="div"></close-tag>
             </div>
         
             <br>
         
-            <div id = "skills"
+            <div id = "main-skills"
                  class="row">
-                <open-tag tagName="div" htmlClass="main-skills"></open-tag>
+                <open-tag tagName="div" htmlId="main-skills"></open-tag>
                 <skills></skills>
                 <close-tag tagName="div"></close-tag>
             </div>
@@ -39,7 +39,7 @@
         
             <div id = "social"
                  class="row">
-                <open-tag tagName="div" htmlClass="social"></open-tag>
+                <open-tag tagName="div" htmlId="social"></open-tag>
                 <social></social>
                 <close-tag tagName="div"></close-tag>
             </div>

@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OpenTagComponent implements OnInit {
 
-  @Input() htmlClass: String = ''; 
+  @Input() htmlId: String = ''; 
 
   @Input() tagName: String = ''; 
 
