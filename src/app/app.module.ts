@@ -16,6 +16,8 @@ import { CloseTagComponent } from './close-tag/close-tag.component';
 import { ExplorerComponent } from './explorer/explorer.component';
 import { AboutComponent } from './about/about.component';
 import { SocialComponent } from './social/social.component';
+import { EducationalBackgroundComponent } from './educational-background/educational-background.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { SocialComponent } from './social/social.component';
     CloseTagComponent,
     ExplorerComponent,
     AboutComponent,
-    SocialComponent
+    SocialComponent,
+    EducationalBackgroundComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,
