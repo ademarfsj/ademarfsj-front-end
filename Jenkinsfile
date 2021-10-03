@@ -6,9 +6,15 @@ pipeline {
             steps { sh 'npm install' }
         }
 
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'npm run-script build'
+            }
+        }
+
+        stage('Create Image') {
+            steps {
+                docker.build("my-image:0.${env.BUILD_ID}")
             }
         }
 
