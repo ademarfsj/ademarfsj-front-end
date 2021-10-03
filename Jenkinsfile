@@ -1,20 +1,10 @@
 pipeline {
-    agent { docker { image 'node:14' } }
+    agent { dockerfile true }
     stages {
 
-        stage('Install') {
-            steps { sh 'npm install' }
-        }
-
-        stage('Build') {
+        stage('Test') {
             steps {
-                sh 'npm run-script build'
-            }
-        }
-
-        stage('Create Image') {
-            steps {
-                docker.build("my-image:0.${env.BUILD_ID}")
+                sh 'node --version'
             }
         }
 
