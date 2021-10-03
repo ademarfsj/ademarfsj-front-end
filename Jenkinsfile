@@ -1,10 +1,10 @@
 pipeline {
-    agent { dockerfile { additionalBuildArgs '--tag ademarfsj/ademarfsj-front-end:latest' } }
+    agent { dockerfile { additionalBuildArgs '--tag ademarfsj/front-end:latest' } }
     stages {
 
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'echo Ok!'
             }
         }
 
