@@ -1,16 +1,30 @@
 pipeline {
-    agent { dockerfile true }
+    environment {
+        imagename = 'ademarfsj/front-end'
+        registryCredential = 'dockerhub'
+        dockerImage = ''
+    }
+    
+    agent any
     stages {
 
-        stage('Tag Image') {
+        stage('Building image') {
             steps {
-                Image.tag(['ademarfsj/front-end:${env.BUILD_ID}', 'ademarfsj/front-end:latest'])
+                script {
+                        dockerImage = docker.build imagename
+                    }
+                }
             }
         }
 
-        stage('Push Image') {
-            steps {
-                Image.push(['ademarfsj/front-end:${env.BUILD_ID}', 'ademarfsj/front-end:latest'])
+        stage('Deploy Image') {
+            steps{
+                script {
+                    docker.withRegistry( '', registryCredential ) {
+                        dockerImage.push("0.$BUILD_NUMBER")
+                        dockerImage.push('latest')
+                    }
+                }
             }
         }
 
