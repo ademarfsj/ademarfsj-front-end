@@ -1,10 +1,16 @@
 pipeline {
-    agent { dockerfile { additionalBuildArgs '--tag ademarfsj/front-end:latest' } }
+    agent { dockerfile true }
     stages {
 
-        stage('Test') {
+        stage('Tag Image') {
             steps {
-                sh 'echo Ok!'
+                Image.tag(['ademarfsj/front-end:${env.BUILD_ID}', 'ademarfsj/front-end:latest'])
+            }
+        }
+
+        stage('Push Image') {
+            steps {
+                Image.push(['ademarfsj/front-end:${env.BUILD_ID}', 'ademarfsj/front-end:latest'])
             }
         }
 
