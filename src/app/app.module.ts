@@ -4,11 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { SkillsComponent } from './skills/skills.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { OpenTagComponent } from './open-tag/open-tag.component';
@@ -18,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { SocialComponent } from './social/social.component';
 import { EducationalBackgroundComponent } from './educational-background/educational-background.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { ClusterComponent } from './cluster/cluster.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +28,13 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     AboutComponent,
     SocialComponent,
     EducationalBackgroundComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    ClusterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BsDropdownModule.forRoot(),
-    TooltipModule.forRoot(),
-    ModalModule.forRoot(),
-    ProgressbarModule.forRoot(),
+    TabsModule,
     BrowserAnimationsModule
   ],
   providers: [],
