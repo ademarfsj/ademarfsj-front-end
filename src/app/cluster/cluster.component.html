@@ -9,7 +9,12 @@
 
                 <p>
                     Yeah, I know this is like using a bazooka to kill an ant, but I made this mainly to learn kubernetes
-                    and now I have a cluster to put some personal apps available through the internet without having to pay new servers.
+                    and now I have a cluster and some basic infrastructure that make things easier to put some personal apps available through the internet without having to pay new servers.
+                </p>
+
+                <p>
+                    Before starting this project I knew I was going to learn some new things but the learning curve went way beyond what I was imagining it would be.  
+                    I learned a lot about networks, kubernetes, docker, jenkins, linux and even how to get out of vi.
                 </p>
 
                 <p>
@@ -19,14 +24,25 @@
                 <img src="../../assets/raspberry-cluster.jpg"
                     alt="Raspberry Cluster"
                     title="Raspberry Cluster">
-
+                    
                 <p>
-                    Before starting this project I knew I was going to learn some new things but the learning curve went way beyond what I was imagining it would be.  
-                    I learned a lot about networks, kubernetes, docker, jenkins, linux and even how to get out of vi.
+                    Everytime I push to the <a href="https://github.com/ademarfsj/ademarfsj-front-end" target="_blank">GitHub repository of this project</a>, a webhook is sent to my Jenkins (which is running on rocket-raccoon)
+                    and automaticaly starts a build and push the result image to my <a href="https://hub.docker.com/repository/docker/ademarfsj/front-end" target="_blank">dockerhub repository</a>
                 </p>
 
+                <img src="../../assets/jenkins-01.png"
+                    alt="Jenkins webhook"
+                    title="Jenkins webhook">
+
+                <br>
+                <br>
+
+                <img src="../../assets/jenkins-02.png"
+                    alt="Jenkins Build"
+                    title="Jenkins Build">
+
                 <p>
-                    In the next image we can see an rolling update, when new pods are created before terminating the older pods, this way I can update the application with 0 downtime.
+                    In the next image we can see an rolling update, when new pods are created before terminating the older ones, this way I can update the application with 0 downtime.
                 </p>
 
                 <img src="../../assets/rolling-update.png"
