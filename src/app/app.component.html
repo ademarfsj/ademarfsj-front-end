@@ -11,7 +11,7 @@
         <div class="col offset-md-3 px-0 content">
 
             <tabset #staticTabs>
-                <tab heading="home.html">
+                <tab heading="home.html" [active]="true">
                     <div id="presentation"
                         class="row tag-div">
                         <open-tag tagName="div" htmlId="presentation"></open-tag>
@@ -54,7 +54,7 @@
                         <close-tag tagName="div"></close-tag>
                     </div>
                 </tab>
-                <tab heading="cluster.html" [active]="true">
+                <tab heading="cluster.html">
                     <div id="cluster"
                         class="row tag-div">
                         <open-tag tagName="div" htmlId="cluster"></open-tag>
